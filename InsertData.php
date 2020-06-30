@@ -31,8 +31,8 @@ if (empty(getenv("DATABASE_URL"))){
    $db = parse_url(getenv("DATABASE_URL"));
    $pdo = new PDO("pgsql:" . sprintf(
          "host=
-ec2-52-202-146-43.compute-1.amazonaws.com
-;port=5432;user=lnmlwwbswnzsfa;password=cb977e5e295f4561e6e00a6bfe3cb3f1239bd0a6f672d8cde0d2527d0f465bbd;dbname=d5jt6vji9s8ql3",
+ec2-52-207-93-32.compute-1.amazonaws.com
+;port=5432;user=pmgfappzphixqc;password=05409dca13b505050745f3da4f0a6a96ee9722ecc964ce568f5a48bd3488ce1d;dbname=ddpdhav9nf2ut4",
         $db["host"],
         $db["port"],
         $db["user"],
@@ -55,7 +55,7 @@ if($pdo === false){
 //$stmt->execute();
 //$sql = "INSERT INTO student(stuid, fname, email, classname) VALUES('SV02', 'Hong Thanh','thanhh@fpt.edu.vn','GCD018')";
 $sql = "INSERT INTO product(id, name, price)"
-        . " VALUES('$_POST[id]','$_POST[name]','$_POST[price]'";
+        . " VALUES('$_POST[id]','$_POST[name]','$_POST[price]')";
 $stmt = $pdo->prepare($sql);
 //$stmt->execute();
  if (is_null($_POST[id])) {
